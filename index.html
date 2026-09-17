@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Xiaofeng Qiao — Ph.D. student in Computer Science at George Mason University. Research in AI systems, efficient machine learning, GPU optimization, and reliable AI." />
+  <link rel="canonical" href="https://xinqsama.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Xiaofeng Qiao | George Mason University" />
+  <meta property="og:description" content="Ph.D. student working on AI systems, efficient machine learning, GPU optimization, and reliable AI." />
+  <meta property="og:url" content="https://xinqsama.github.io/" />
+  <meta property="og:image" content="https://xinqsama.github.io/assets/avatar.jpg" />
+  <link rel="icon" href="assets/avatar.jpg" />
+  <title>Xiaofeng Qiao | Academic Homepage</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-name" href="#top">Xiaofeng Qiao</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#education">Education</a>
+        <a href="assets/Xiaofeng_Qiao_CV_2026.docx">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="profile container" id="top">
+      <div class="profile-text">
+        <h1>Xiaofeng Qiao <span class="cn-name">乔晓峰</span></h1>
+        <p class="title-line">Ph.D. Student in Computer Science</p>
+        <p class="affiliation">George Mason University · Fairfax, Virginia</p>
+
+        <p class="bio" id="about">
+          I am a Ph.D. student in Computer Science at George Mason University. My research lies at the intersection of
+          <strong>AI systems</strong>, <strong>efficient machine learning</strong>, and <strong>reliable AI</strong>.
+          I am broadly interested in making modern AI models faster, smaller, and more dependable through GPU runtime
+          optimization, compiler and operator optimization, model compression, and efficient inference infrastructure.
+        </p>
+
+        <p class="bio">
+          My work spans low-level CUDA/PTX execution and TVM-based optimization, as well as pruning, quantization,
+          uncertainty estimation, and serving systems for LLMs and multimodal models.
+        </p>
+
+        <div class="profile-links" aria-label="Profile links">
+          <a href="mailto:xqiao@gmu.edu">Email</a>
+          <a href="assets/Xiaofeng_Qiao_CV_2026.docx">CV</a>
+          <a href="https://github.com/XINQSAMA" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <figure class="portrait">
+        <img src="assets/avatar.jpg" alt="Blue-toned illustrated profile avatar with butterflies and flowers" />
+      </figure>
+    </section>
+
+    <section class="section container" aria-labelledby="interests-title">
+      <h2 id="interests-title">Research Interests</h2>
+      <div class="interests-grid">
+        <div>
+          <h3>AI / ML Systems</h3>
+          <p>High-performance inference, multi-model execution, GPU scheduling, resource management, and deployment.</p>
+        </div>
+        <div>
+          <h3>Compilers &amp; GPU Optimization</h3>
+          <p>TVM TIR, automatic operator tuning, computation-graph transformations, CUDA code generation, and PTX-level optimization.</p>
+        </div>
+        <div>
+          <h3>Efficient &amp; Reliable ML</h3>
+          <p>Structured pruning, quantization, knowledge distillation, uncertainty calibration, and robustness under distribution shift.</p>
+        </div>
+        <div>
+          <h3>LLM / VLM Inference</h3>
+          <p>Efficient serving, dynamic batching, inference optimization, retrieval-augmented systems, and agent-oriented infrastructure.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="research" aria-labelledby="research-title">
+      <h2 id="research-title">Research Experience</h2>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <span class="entry-date">2024–present</span>
+          <span class="entry-place">George Mason University</span>
+        </div>
+        <div class="entry-body">
+          <h3>GPU Runtime, Compiler, and Operator Optimization</h3>
+          <p>
+            I develop infrastructure for optimizing neural-network computation graphs and GPU kernels across server and edge platforms.
+            The work combines automatic operator search, compilation, code generation, and software-defined GPU scheduling.
+          </p>
+          <ul>
+            <li>Built TVM TIR templates for operators including Conv2D, matrix multiplication, attention, and max pooling, with PyTorch bindings.</li>
+            <li>Used surrogate-model-guided search and diversity-aware optimization for single-objective and Pareto-style operator tuning.</li>
+            <li>Implemented ONNX transformations and C++ code generation targeting CUDA and inline PTX.</li>
+            <li>Explored persistent-thread and warp-level scheduling for concurrent inference and fine-grained power management.</li>
+            <li>Selected deployments achieved approximately 60% lower end-to-end latency than TensorFlow XLA and 40% lower latency than TensorRT.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <span class="entry-date">2021–2024</span>
+          <span class="entry-place">The Pennsylvania State University</span>
+        </div>
+        <div class="entry-body">
+          <h3>Uncertainty-Aware Model Compression</h3>
+          <p>
+            I worked on efficient and reliable deep learning, with a focus on preserving useful uncertainty estimates while compressing models for practical deployment.
+          </p>
+          <ul>
+            <li>Combined structured pruning, mixed-precision training, INT8 post-training quantization, and knowledge distillation.</li>
+            <li>Evaluated uncertainty with Monte Carlo dropout and deep ensembles across vision, human-activity recognition, and control tasks.</li>
+            <li>Studied reliability under corruption, out-of-distribution inputs, and adversarial examples.</li>
+            <li>In selected activity-recognition models, compressed roughly 85% of model parameters/size with less than a one-percentage-point accuracy drop.</li>
+            <li>In selected reliability evaluations, uncertainty calibration improved average AUROC by about 12 percentage points after 66% parameter compression.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <span class="entry-date">Selected project</span>
+          <span class="entry-place">AI Inference Systems</span>
+        </div>
+        <div class="entry-body">
+          <h3>Real-Time GPU Inference Infrastructure</h3>
+          <p>
+            I have also worked on production-oriented inference optimization, combining model compression and compiler techniques with serving-side runtime optimizations.
+          </p>
+          <ul>
+            <li>Optimized a real-time TTS inference pipeline using graph transformations, operator fusion, loop unrolling, and memory-layout optimization.</li>
+            <li>Used dynamic batching and CUDA streams to improve throughput and GPU utilization.</li>
+            <li>Integrated LLM services with request controls, context management, retrieval, and caching for more efficient and controllable serving.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="section container" id="publications" aria-labelledby="publications-title">
+      <h2 id="publications-title">Publications</h2>
+      <div class="publications-note">
+        <p>
+          A curated list of published and accepted papers, together with public preprints, will be added here.
+          Manuscripts that are still under anonymous review are intentionally omitted until they are appropriate to make public.
+        </p>
+        <p class="small-note">
+          Publication entries will include title, authors, venue, year, and links to paper / code / BibTeX when available.
+        </p>
+      </div>
+    </section>
+
+    <section class="section container" id="education" aria-labelledby="education-title">
+      <h2 id="education-title">Education</h2>
+      <div class="education-list">
+        <article class="education-item">
+          <div class="education-year">2024–2029</div>
+          <div>
+            <h3>George Mason University</h3>
+            <p>Ph.D. in Computer Science</p>
+            <span>Research focus: high-performance and reliable AI systems</span>
+          </div>
+        </article>
+        <article class="education-item">
+          <div class="education-year">2021–2024</div>
+          <div>
+            <h3>The Pennsylvania State University</h3>
+            <p>M.S. in Computer Science</p>
+            <span>Research on efficient and uncertainty-aware machine learning</span>
+          </div>
+        </article>
+        <article class="education-item">
+          <div class="education-year">2017–2021</div>
+          <div>
+            <h3>University of Electronic Science and Technology of China</h3>
+            <p>B.Eng. in Electronic Information Engineering</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="skills-title">
+      <h2 id="skills-title">Technical Background</h2>
+      <div class="skills-table">
+        <div><strong>Systems / Compilers</strong><span>CUDA, PTX, TVM, TensorRT, Triton, NVIDIA Nsight, ONNX</span></div>
+        <div><strong>ML / AI</strong><span>PyTorch, TensorFlow, VLM, VLA, RAG, Agent Systems, Megatron</span></div>
+        <div><strong>Serving / Infrastructure</strong><span>vLLM, SGLang, Docker, Kubernetes, AWS</span></div>
+        <div><strong>Programming</strong><span>Python, C++, C, Go, Java, Scala, Swift, SQL</span></div>
+      </div>
+    </section>
+
+    <section class="section container contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>
+        For research discussions or collaboration, please contact me at
+        <a href="mailto:xqiao@gmu.edu">xqiao@gmu.edu</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Xiaofeng Qiao</span>
+      <span>Last updated: September 2026</span>
+    </div>
+  </footer>
+</body>
+</html>

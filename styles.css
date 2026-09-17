@@ -1,0 +1,271 @@
+:root {
+  --bg: #ffffff;
+  --text: #1e2430;
+  --muted: #5f6878;
+  --accent: #2e568f;
+  --accent-dark: #213f6b;
+  --line: #dfe4ec;
+  --soft: #f6f8fb;
+  --max: 980px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.68;
+}
+
+img { max-width: 100%; display: block; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--accent-dark); }
+strong { font-weight: 650; }
+
+.container {
+  width: min(var(--max), calc(100% - 42px));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  z-index: 100;
+  padding: .55rem .75rem;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+.skip-link:focus { left: 12px; }
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .97);
+}
+.header-inner {
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.site-name {
+  color: var(--text);
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 1.12rem;
+}
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 22px;
+}
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: .92rem;
+}
+.site-nav a:hover { color: var(--accent-dark); }
+
+.profile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 54px;
+  align-items: start;
+  padding-top: 68px;
+  padding-bottom: 58px;
+}
+.profile h1 {
+  margin: 0 0 5px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.45rem, 5vw, 3.85rem);
+  line-height: 1.08;
+  letter-spacing: -.025em;
+  font-weight: 700;
+}
+.cn-name {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: .52em;
+  color: var(--muted);
+  font-weight: 500;
+  margin-left: .24em;
+  white-space: nowrap;
+}
+.title-line {
+  margin: 14px 0 0;
+  font-size: 1.12rem;
+  font-weight: 650;
+}
+.affiliation {
+  margin: 2px 0 25px;
+  color: var(--muted);
+}
+.bio {
+  max-width: 720px;
+  margin: 0 0 15px;
+  color: #303846;
+}
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+.profile-links a {
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid #9eb0c9;
+}
+.portrait {
+  margin: 3px 0 0;
+}
+.portrait img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.section {
+  padding: 46px 0;
+  border-top: 1px solid var(--line);
+}
+.section h2 {
+  margin: 0 0 26px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.75rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #151b24;
+}
+.section h3 {
+  margin: 0;
+  font-size: 1.04rem;
+  line-height: 1.35;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 44px;
+}
+.interests-grid > div {
+  padding: 15px 0 18px;
+  border-bottom: 1px solid #edf0f4;
+}
+.interests-grid h3 { color: var(--accent-dark); }
+.interests-grid p { margin: 5px 0 0; color: var(--muted); font-size: .95rem; }
+
+.entry {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 34px;
+  padding: 6px 0 34px;
+}
+.entry + .entry {
+  border-top: 1px solid #edf0f4;
+  padding-top: 31px;
+}
+.entry-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: var(--muted);
+  font-size: .88rem;
+}
+.entry-date { font-weight: 700; color: #37465b; }
+.entry-place { line-height: 1.45; }
+.entry-body h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.22rem;
+}
+.entry-body > p {
+  margin: 8px 0 11px;
+  color: #3e4654;
+}
+ul { margin: 8px 0 0; padding-left: 1.18rem; }
+li { margin: 4px 0; }
+
+.publications-note {
+  padding-left: 17px;
+  border-left: 3px solid #bdcbe0;
+  max-width: 780px;
+}
+.publications-note p { margin: 0; }
+.small-note { margin-top: 10px !important; color: var(--muted); font-size: .92rem; }
+
+.education-list { display: grid; }
+.education-item {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 30px;
+  padding: 17px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+.education-year { color: var(--muted); font-size: .9rem; font-weight: 650; }
+.education-item h3 { font-family: Georgia, "Times New Roman", serif; }
+.education-item p { margin: 3px 0 0; font-weight: 600; }
+.education-item span { color: var(--muted); font-size: .92rem; }
+
+.skills-table {
+  border-top: 1px solid var(--line);
+}
+.skills-table > div {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 24px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.skills-table strong { font-size: .92rem; }
+.skills-table span { color: var(--muted); font-size: .92rem; }
+
+.contact p { margin: 0; }
+.site-footer {
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .83rem;
+}
+.footer-inner {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+:focus-visible { outline: 2px solid #6386b5; outline-offset: 3px; }
+
+@media (max-width: 760px) {
+  .header-inner { align-items: flex-start; padding: 14px 0; }
+  .site-nav { gap: 10px 16px; }
+  .profile {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 48px;
+  }
+  .portrait { grid-row: 1; }
+  .portrait img { width: 160px; height: 160px; }
+  .profile-text { grid-row: 2; }
+  .interests-grid { grid-template-columns: 1fr; }
+  .entry, .education-item, .skills-table > div {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+  .footer-inner { flex-direction: column; align-items: flex-start; justify-content: center; padding: 18px 0; }
+}
+
+@media (max-width: 520px) {
+  .container { width: min(var(--max), calc(100% - 28px)); }
+  .header-inner { display: block; }
+  .site-nav { margin-top: 8px; justify-content: flex-start; }
+  .profile h1 { font-size: 2.65rem; }
+  .cn-name { display: block; margin: 9px 0 0; font-size: .42em; }
+}

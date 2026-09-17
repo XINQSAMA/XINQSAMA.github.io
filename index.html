@@ -3,17 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Xiaofeng Qiao — Ph.D. student in Computer Science at George Mason University. Research in AI systems, efficient machine learning, GPU optimization, and reliable AI." />
+  <meta
+    name="description"
+    content="Xiaofeng Qiao — Ph.D. student in Computer Science at George Mason University. Research in efficient and reliable machine learning, AI/ML systems, GPU optimization, and trustworthy LLMs for code and program analysis."
+  />
   <link rel="canonical" href="https://xinqsama.github.io/" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Xiaofeng Qiao | George Mason University" />
-  <meta property="og:description" content="Ph.D. student working on AI systems, efficient machine learning, GPU optimization, and reliable AI." />
+  <meta
+    property="og:description"
+    content="Ph.D. student working on efficient and reliable ML, AI/ML systems, GPU optimization, and trustworthy LLMs for code and program analysis."
+  />
   <meta property="og:url" content="https://xinqsama.github.io/" />
   <meta property="og:image" content="https://xinqsama.github.io/assets/avatar.jpg" />
   <link rel="icon" href="assets/avatar.jpg" />
   <title>Xiaofeng Qiao | Academic Homepage</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -38,15 +45,19 @@
         <p class="affiliation">George Mason University · Fairfax, Virginia</p>
 
         <p class="bio" id="about">
-          I am a Ph.D. student in Computer Science at George Mason University. My research lies at the intersection of
-          <strong>AI systems</strong>, <strong>efficient machine learning</strong>, and <strong>reliable AI</strong>.
-          I am broadly interested in making modern AI models faster, smaller, and more dependable through GPU runtime
-          optimization, compiler and operator optimization, model compression, and efficient inference infrastructure.
+          I am a Ph.D. student in Computer Science at George Mason University.
+          My research focuses on <strong>efficient and reliable machine learning</strong>,
+          <strong>AI/ML systems</strong>, and
+          <strong>trustworthy LLMs for code and program analysis</strong>.
+          I am broadly interested in making modern AI models faster, smaller,
+          and more dependable through model compression, efficient inference,
+          GPU runtime optimization, and validation-guided reasoning for software tasks.
         </p>
 
         <p class="bio">
-          My work spans low-level CUDA/PTX execution and TVM-based optimization, as well as pruning, quantization,
-          uncertainty estimation, and serving systems for LLMs and multimodal models.
+          My work spans structured pruning and uncertainty calibration,
+          compiler and GPU optimization, LLM/VLM inference, secure code generation,
+          code translation, and LLM-based decompilation.
         </p>
 
         <div class="profile-links" aria-label="Profile links">
@@ -57,129 +68,208 @@
       </div>
 
       <figure class="portrait">
-        <img src="assets/avatar.jpg" alt="Blue-toned illustrated profile avatar with butterflies and flowers" />
+        <img src="assets/avatar.jpg" alt="Xiaofeng Qiao profile avatar" />
       </figure>
     </section>
 
     <section class="section container" aria-labelledby="interests-title">
       <h2 id="interests-title">Research Interests</h2>
+
       <div class="interests-grid">
         <div>
-  <h3>Efficient &amp; Reliable ML</h3>
-  <p>
-    Model compression and reliability, including structured pruning,
-    quantization, knowledge distillation, uncertainty calibration,
-    and robustness under distribution shift.
-  </p>
-</div>
+          <h3>Efficient &amp; Reliable ML</h3>
+          <p>
+            Model compression and reliability, including structured pruning,
+            quantization, knowledge distillation, uncertainty calibration,
+            and robustness under distribution shift.
+          </p>
+        </div>
 
-<div>
-  <h3>AI / ML Systems</h3>
-  <p>
-    Efficient AI infrastructure for high-performance inference,
-    multi-model execution, GPU scheduling, resource management,
-    and deployment.
-  </p>
-</div>
+        <div>
+          <h3>AI / ML Systems</h3>
+          <p>
+            Efficient AI infrastructure for high-performance inference,
+            multi-model execution, GPU scheduling, resource management,
+            and deployment.
+          </p>
+        </div>
 
-<div>
-  <h3>LLM / VLM Inference</h3>
-  <p>
-    Efficient serving and inference for large language and multimodal models,
-    including batching, caching, retrieval, and agent-oriented systems.
-  </p>
-</div>
+        <div>
+          <h3>LLM / VLM Inference</h3>
+          <p>
+            Efficient serving and inference for large language and multimodal models,
+            including batching, caching, retrieval, and agent-oriented systems.
+          </p>
+        </div>
 
-<div>
-  <h3>Compilers &amp; GPU Optimization</h3>
-  <p>
-    Compiler and runtime optimization with TVM TIR, operator tuning,
-    graph transformation, CUDA code generation, and PTX-level optimization.
-  </p>
-</div>
+        <div>
+          <h3>Compilers &amp; GPU Optimization</h3>
+          <p>
+            Compiler and runtime optimization with TVM TIR, operator tuning,
+            graph transformation, CUDA code generation, and PTX-level optimization.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section class="section container" id="research" aria-labelledby="research-title">
-      <h2 id="research-title">Research Experience</h2>
+      <h2 id="research-title">Selected Research Projects</h2>
 
       <article class="entry">
         <div class="entry-meta">
-          <span class="entry-date">2024–present</span>
-          <span class="entry-place">George Mason University</span>
+          <span class="entry-date">Efficient &amp; Reliable ML</span>
+          <span class="entry-place">In Submission</span>
         </div>
         <div class="entry-body">
-          <h3>GPU Runtime, Compiler, and Operator Optimization</h3>
+          <h3>Reliable Model Compression with Calibrated Uncertainty</h3>
           <p>
-            I develop infrastructure for optimizing neural-network computation graphs and GPU kernels across server and edge platforms.
-            The work combines automatic operator search, compilation, code generation, and software-defined GPU scheduling.
+            Efficient model compression while preserving calibration,
+            uncertainty estimation, and robustness.
           </p>
-          <ul>
-            <li>Built TVM TIR templates for operators including Conv2D, matrix multiplication, attention, and max pooling, with PyTorch bindings.</li>
-            <li>Used surrogate-model-guided search and diversity-aware optimization for single-objective and Pareto-style operator tuning.</li>
-            <li>Implemented ONNX transformations and C++ code generation targeting CUDA and inline PTX.</li>
-            <li>Explored persistent-thread and warp-level scheduling for concurrent inference and fine-grained power management.</li>
-            <li>Selected deployments achieved approximately 60% lower end-to-end latency than TensorFlow XLA and 40% lower latency than TensorRT.</li>
-          </ul>
         </div>
       </article>
 
       <article class="entry">
         <div class="entry-meta">
-          <span class="entry-date">2021–2024</span>
-          <span class="entry-place">The Pennsylvania State University</span>
+          <span class="entry-date">AI / ML Systems</span>
+          <span class="entry-place">Ongoing Research</span>
         </div>
         <div class="entry-body">
-          <h3>Uncertainty-Aware Model Compression</h3>
+          <h3>Compiler-Guided GPU Operator Optimization</h3>
           <p>
-            I worked on efficient and reliable deep learning, with a focus on preserving useful uncertainty estimates while compressing models for practical deployment.
+            Compiler-level search, graph transformations, and CUDA/PTX code generation
+            for efficient neural-network operators.
           </p>
-          <ul>
-            <li>Combined structured pruning, mixed-precision training, INT8 post-training quantization, and knowledge distillation.</li>
-            <li>Evaluated uncertainty with Monte Carlo dropout and deep ensembles across vision, human-activity recognition, and control tasks.</li>
-            <li>Studied reliability under corruption, out-of-distribution inputs, and adversarial examples.</li>
-            <li>In selected activity-recognition models, compressed roughly 85% of model parameters/size with less than a one-percentage-point accuracy drop.</li>
-            <li>In selected reliability evaluations, uncertainty calibration improved average AUROC by about 12 percentage points after 66% parameter compression.</li>
-          </ul>
         </div>
       </article>
 
       <article class="entry">
         <div class="entry-meta">
-          <span class="entry-date">Selected project</span>
-          <span class="entry-place">AI Inference Systems</span>
+          <span class="entry-date">AI / ML Systems</span>
+          <span class="entry-place">Ongoing Research</span>
         </div>
         <div class="entry-body">
-          <h3>Real-Time GPU Inference Infrastructure</h3>
+          <h3>Resource-Aware GPU Runtime for Efficient Inference</h3>
           <p>
-            I have also worked on production-oriented inference optimization, combining model compression and compiler techniques with serving-side runtime optimizations.
+            Fine-grained scheduling, concurrency, and GPU resource management
+            for high-performance AI inference.
           </p>
-          <ul>
-            <li>Optimized a real-time TTS inference pipeline using graph transformations, operator fusion, loop unrolling, and memory-layout optimization.</li>
-            <li>Used dynamic batching and CUDA streams to improve throughput and GPU utilization.</li>
-            <li>Integrated LLM services with request controls, context management, retrieval, and caching for more efficient and controllable serving.</li>
-          </ul>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <span class="entry-date">AI / ML Systems</span>
+          <span class="entry-place">Ongoing Research</span>
+        </div>
+        <div class="entry-body">
+          <h3>Power- and Thermal-Aware GPU Inference</h3>
+          <p>
+            Runtime resource and power management for sustained inference
+            under energy and thermal constraints.
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <span class="entry-date">Code &amp; Program Analysis</span>
+          <span class="entry-place">In Submission</span>
+        </div>
+        <div class="entry-body">
+          <h3>CoGate: Confidence-Gated Secure Code Generation</h3>
+          <p>
+            Confidence-aware decoding for more reliable and security-aware
+            LLM-generated code.
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <span class="entry-date">Code &amp; Program Analysis</span>
+          <span class="entry-place">In Submission</span>
+        </div>
+        <div class="entry-body">
+          <h3>Validation-Guided LLM Decompilation</h3>
+          <p>
+            Compiler, execution, and test feedback guide iterative multi-agent
+            refinement for trustworthy reverse engineering.
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <span class="entry-date">Code &amp; Program Analysis</span>
+          <span class="entry-place">In Submission</span>
+        </div>
+        <div class="entry-body">
+          <h3>Compiler-Inspired Code Translation with Guided Refinement</h3>
+          <p>
+            Compiler-inspired transformations and iterative refinement
+            for more reliable cross-language code translation.
+          </p>
         </div>
       </article>
     </section>
 
     <section class="section container" id="publications" aria-labelledby="publications-title">
-  <h2 id="publications-title">Publications &amp; Manuscripts in Submission</h2>
+      <h2 id="publications-title">Publications &amp; Manuscripts</h2>
 
-  <div class="publications-note">
-    <p>
-      Several of my current research projects are in submission.
-      Manuscripts will be listed here as they become publicly available.
-    </p>
+      <article class="entry">
+        <div class="entry-meta">
+          <span class="entry-date">2026</span>
+          <span class="entry-place">In Submission</span>
+        </div>
+        <div class="entry-body">
+          <h3>
+            Pruned Models Forget Their Doubt:
+            Preserving Calibrated Uncertainty under Structured Compression
+          </h3>
+        </div>
+      </article>
 
-    <p class="small-note">
-      For manuscripts currently under anonymous review, detailed submission
-      information is omitted until it is appropriate to make the work public.
-    </p>
-  </div>
-</section>
+      <article class="entry">
+        <div class="entry-meta">
+          <span class="entry-date">2026</span>
+          <span class="entry-place">In Submission</span>
+        </div>
+        <div class="entry-body">
+          <h3>CoGate: Confidence-Gated Co-Decoding for Secure Code Generation</h3>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <span class="entry-date">2026</span>
+          <span class="entry-place">In Submission</span>
+        </div>
+        <div class="entry-body">
+          <h3>
+            Towards Trustworthy Reverse Engineering:
+            A Test-Driven Multi-Agent Framework for LLM Decompilation
+          </h3>
+        </div>
+      </article>
+
+      <article class="entry">
+        <div class="entry-meta">
+          <span class="entry-date">2026</span>
+          <span class="entry-place">In Submission</span>
+        </div>
+        <div class="entry-body">
+          <h3>
+            Enhancing Code Translation with Compiler-Inspired Transformation
+            and Guided Refinement
+          </h3>
+        </div>
+      </article>
+    </section>
 
     <section class="section container" id="education" aria-labelledby="education-title">
       <h2 id="education-title">Education</h2>
+
       <div class="education-list">
         <article class="education-item">
           <div class="education-year">2024–2029</div>
@@ -189,6 +279,7 @@
             <span>Research focus: high-performance and reliable AI systems</span>
           </div>
         </article>
+
         <article class="education-item">
           <div class="education-year">2021–2024</div>
           <div>
@@ -197,6 +288,7 @@
             <span>Research on efficient and uncertainty-aware machine learning</span>
           </div>
         </article>
+
         <article class="education-item">
           <div class="education-year">2017–2021</div>
           <div>
@@ -209,11 +301,24 @@
 
     <section class="section container" aria-labelledby="skills-title">
       <h2 id="skills-title">Technical Background</h2>
+
       <div class="skills-table">
-        <div><strong>Systems / Compilers</strong><span>CUDA, PTX, TVM, TensorRT, Triton, NVIDIA Nsight, ONNX</span></div>
-        <div><strong>ML / AI</strong><span>PyTorch, TensorFlow, VLM, VLA, RAG, Agent Systems, Megatron</span></div>
-        <div><strong>Serving / Infrastructure</strong><span>vLLM, SGLang, Docker, Kubernetes, AWS</span></div>
-        <div><strong>Programming</strong><span>Python, C++, C, Go, Java, Scala, Swift, SQL</span></div>
+        <div>
+          <strong>Systems / Compilers</strong>
+          <span>CUDA, PTX, TVM, TensorRT, Triton, NVIDIA Nsight, ONNX</span>
+        </div>
+        <div>
+          <strong>ML / AI</strong>
+          <span>PyTorch, TensorFlow, VLM, VLA, RAG, Agent Systems, Megatron</span>
+        </div>
+        <div>
+          <strong>Serving / Infrastructure</strong>
+          <span>vLLM, SGLang, Docker, Kubernetes, AWS</span>
+        </div>
+        <div>
+          <strong>Programming</strong>
+          <span>Python, C++, C, Go, Java, Scala, Swift, SQL</span>
+        </div>
       </div>
     </section>
 
